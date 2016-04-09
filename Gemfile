@@ -39,3 +39,17 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 gem 'bootstrap-sass', '~> 3.1.1'
 
+group :development, :test do
+  gem "rspec-rails", "~> 3.1.0"     #分装RSpec的程序,还包含了一些专为Rails提供的功能
+  gem "factory_girl_rails", "~> 4.4.1"  #把Rails生成测试数据默认使用的估计换成更好用的预构件
+end
+
+group :test do
+  gem  "faker", "~> 1.4.3"  #为预构件生成名字, Email地址以及其他的示例数据
+  gem "capybara", "~> 2.4.3"  #便于模拟用户和应用的交互操作
+  gem "database_cleaner", "~> 1.3.0"  #清理 "测试数据库", 确保Rspec忠的测试用例运行于一块净土之上
+  gem "launchy", "~> 2.4.2" #这个gem的功能只有一个,但做的很好,如果需要,它会打开系统的默认浏览器, 显示应用当前渲染的页面.调试测试特别有用
+  gem "selenium-webdriver", "~> 2.43.0" #结合Capybara测试基于JavaScript的交互操作
+end
+
+
