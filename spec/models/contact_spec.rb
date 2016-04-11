@@ -10,7 +10,7 @@ describe Contact do
   # end
 
   #使用factory 预构件来进行测试
-  it "is has a valid factory" do
+  it "has a valid factory" do
     expect(build(:contact)).to be_valid
   end
 
