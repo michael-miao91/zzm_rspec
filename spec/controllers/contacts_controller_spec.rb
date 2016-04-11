@@ -100,7 +100,7 @@ describe ContactsController do
         expect{
           post :create,
                contact: attributes_for(:invalid_contact)
-        }.to_not change(Contact, :count)
+        }.not_to change(Contact, :count)
       end
 
       it "re-renders the :new template" do
