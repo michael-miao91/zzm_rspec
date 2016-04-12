@@ -42,6 +42,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 group :development, :test do
   gem "rspec-rails", "~> 3.1.0"     #分装RSpec的程序,还包含了一些专为Rails提供的功能
   gem "factory_girl_rails", "~> 4.4.1"  #把Rails生成测试数据默认使用的估计换成更好用的预构件
+  gem 'guard-rspec', '~> 4.3.1'
+  gem 'spring-commands-rspec', '~> 1.0.2'
 end
 
 group :test do
@@ -51,6 +53,7 @@ group :test do
   gem "launchy", "~> 2.4.2" #这个gem的功能只有一个,但做的很好,如果需要,它会打开系统的默认浏览器, 显示应用当前渲染的页面.调试测试特别有用
   gem "selenium-webdriver"#, "~> 2.43.0" #结合Capybara测试基于JavaScript的交互操作
   gem "chromedriver-helper"
+  gem 'shoulda-matchers', '~> 2.6.2'
 end
 
 
